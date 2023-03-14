@@ -17,6 +17,7 @@ body {
     --surface-color: rgba(255, 255, 255, 0.05);
     --surface-color-hover: rgba(0, 0, 0, 0.02);
     --hightlight-color: rgba(0, 0, 0, 0.1);
+    --switch-bg-url: url(./assets/moon-stars.svg)
 }
 
 .claro {
@@ -25,6 +26,7 @@ body {
     --stroke-color: rgba(0, 0, 0, 0.5);
     --surface-color: rgba(0, 0, 0, 0.05);
     --surface-color-hover: rgba(0, 0, 0, 0.2);
+    --switch-bg-url: url(./assets/sun.svg)
 }
 
 body * {
@@ -95,4 +97,27 @@ footer {
     padding: 24px 0px;
     text-align: center;
     font-size: 14px;
+}
+
+#switch {
+    border: 1px solid blue;
+    position: relative;
+}
+
+#switch button {
+    border: 1px solid var(--stroke-color);
+    width: 32px;
+    height: 32px;
+    background: var(--surface-color-hover) var(--switch-bg-url) no-repeat center;
+    border-radius: 50px;
+    position: absolute;
+}
+
+#switch span {
+    border: 1px solid var(--stroke-color);
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: var(--surface-color);
+    border-radius: 9999px;
 }
